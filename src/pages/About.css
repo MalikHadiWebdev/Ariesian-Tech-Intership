@@ -1,0 +1,19 @@
+/* Style for About Page Skills Section */
+.ul-about {
+  margin: 20px 0;
+}
+
+.ul-about .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ul-about .col-6 {
+  width: 50%; /* Default for larger screens */
+}
+
+@media (max-width: 700px) {
+  .ul-about .col-6 {
+    width: 100%; /* Change to 1 column at 700px */
+  }
+}

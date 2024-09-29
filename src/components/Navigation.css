@@ -1,0 +1,97 @@
+:root {
+  --transition: cubic-bezier(0.1, 0.7, 0, 1);
+}
+.navigation{
+  height: 81vh;
+  overflow: hidden;
+}
+.imgDisplay {
+  width: auto;
+  height: 65vh;
+  max-height: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.imgDisplay img {
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: calc(100vh - 126px); */
+  font-size: 5px;
+}
+.img_parent {
+  display: flex;
+  gap: 0.4em;
+  perspective: 60em;
+}
+.img {
+  width: 5.4em;
+  height: 21em;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 1.25s var(--transition), filter 3s var(--transition),
+    width 0.3s var(--transition);
+  position: relative;
+  filter: grayscale(1) brightness(0.5);
+  will-change: transform, filter;
+}
+.img:hover {
+  transform: translateZ(17.375em);
+  filter: inherit;
+}
+.img:hover + * {
+  transform: translateZ(14.77em) rotateY(35deg);
+  filter: grayscale(0.2) brightness(0.9);
+}
+.img:hover + * + * {
+  transform: translateZ(9.73em) rotateY(40deg);
+  filter: grayscale(0.4) brightness(0.8);
+}
+.img:hover + * + * + * {
+  transform: translateZ(4.17em) rotateY(35deg);
+  filter: grayscale(0.6) brightness(0.7);
+}
+.img:hover + * + * + * + * {
+  transform: translateZ(1.1em) rotateY(25deg);
+  filter: grayscale(0.8) brightness(0.6);
+}
+.img:has(+ :hover) {
+  transform: translateZ(14.77em) rotateY(-35deg);
+  filter: grayscale(0.2) brightness(0.9);
+}
+.img:has(+ * + :hover) {
+  transform: translateZ(9.73em) rotateY(-40deg);
+  filter: grayscale(0.4) brightness(0.8);
+}
+.img:has(+ * + * + :hover) {
+  transform: translateZ(4.17em) rotateY(-35deg);
+  filter: grayscale(0.6) brightness(0.7);
+}
+.img:has(+ * + * + * + :hover) {
+  transform: translateZ(1.1em) rotateY(-25deg);
+  filter: grayscale(0.8) brightness(0.6);
+}
+.img::before,
+.img::after {
+  content: "";
+  position: absolute;
+  width: 1.25em;
+  height: 100%;
+  right: -1.25em;
+}
+.img::after {
+  left: -1.25em;
+}
+.open {
+  width: 8vw;
+  transform: translateZ(17.375em);
+  filter: inherit;
+  z-index: 1;
+  margin: 0, 0.45vw;
+}

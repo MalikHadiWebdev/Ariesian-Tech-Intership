@@ -1,0 +1,23 @@
+.gallery {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+.gallery .row {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 33%;
+  height: fit-content;
+}
+.row img {
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery .row {
+    width: 100%;
+  }
+}
