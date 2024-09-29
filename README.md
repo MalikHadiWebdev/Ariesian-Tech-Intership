@@ -24,6 +24,9 @@ Here are the main tasks I completed during my internship:
 - Developed a stopwatch application with start, pause, and reset functionalities.
 - Included lap time tracking for better user experience.
 
+## Live Demo
+Check out the live demo of my work: [Live Demo](https://malik-hadi-internship.netlify.app/)
+
 ## How to Run the Code
 To run the projects locally, follow these steps:
 
@@ -48,8 +51,8 @@ To run the projects locally, follow these steps:
    ```
 
 ## Links
-- [LinkedIn Profile](https://www.linkedin.com/in/malik-hadi) (replace with your actual link)
-- [Portfolio Website](https://your-portfolio-link.com) (replace with your actual link)
+- [LinkedIn Profile](https://www.linkedin.com/in/malik-hadi-zulfiqar-5a932a29b/)
+- [Portfolio Website](https://tsxmurshad.github.io/portfolio/)
 
 ## Acknowledgments
 - Special thanks to **Ariesian Tech** for the opportunity to intern and learn about front-end development.
